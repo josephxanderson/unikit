@@ -1,27 +1,35 @@
 :root {
-	--unikit-color-white: #ffffff;
-	--unikit-color-white-rgb: 255, 255, 255;
+	--unikit-color-white: 255, 255, 255;
 
-	--unikit-color-black: #000000;
-	--unikit-color-black-rgb: 0, 0, 0;
-}
+	--unikit-color-black: 0, 0, 0;
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--unikit-global-color-background: var(--unikit-color-black);
-		--unikit-global-color-background-rgb: var(--unikit-color-black-rgb);
+	--unikit-color-blue: 0, 122, 255;
 
-		--unikit-global-color-foreground: var(--unikit-color-white);
-		--unikit-global-color-foreground-rgb: var(--unikit-color-white-rgb);
-	}
-}
+	--unikit-color-green: 48, 209, 88;
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--unikit-global-color-background: var(--unikit-color-white);
-		--unikit-global-color-background-rgb: var(--unikit-color-white-rgb);
+	--unikit-color-indigo: 94, 92, 230;
 
-		--unikit-global-color-foreground: var(--unikit-color-black);
-		--unikit-global-color-foreground-rgb: var(--unikit-color-black-rgb);
-	}
+	--unikit-color-orange: 255, 159, 10;
+
+	--unikit-color-pink: 255, 55, 95;
+
+	--unikit-color-purple: 191, 90, 242;
+
+	--unikit-color-red: 255, 69, 58;
+
+	--unikit-color-teal: 100, 210, 255;
+
+	--unikit-color-yellow: 255, 214, 10;
+
+	--unikit-color-gray-1: 242, 242, 247;
+	--unikit-color-gray-2: 229, 229, 234;
+	--unikit-color-gray-3: 209, 209, 214;
+	--unikit-color-gray-4: 199, 199, 204;
+	--unikit-color-gray-5: 174, 174, 178;
+	--unikit-color-gray-6: 142, 142, 147;
+	--unikit-color-gray-7: 99, 99, 102;
+	--unikit-color-gray-8: 72, 72, 74;
+	--unikit-color-gray-9: 58, 58, 60;
+	--unikit-color-gray-10: 44, 44, 46;
+	--unikit-color-gray-11: 28, 28, 30;
 }

@@ -1,8 +1,8 @@
 // Framework imports
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 
-import ConfigurationContext from '../../configuration-context.js';
+import ConfigurationContext from "../../configuration-context.js";
 
 const Text = ({
 	alignment,
@@ -22,9 +22,9 @@ const Text = ({
 
 Text.propTypes = {
 	alignment: PropTypes.oneOf([
-		'center',
-		'leading',
-		'trailing',
+		"center",
+		"leading",
+		"trailing",
 	]),
 	color: PropTypes.string,
 	font: PropTypes.shape({
