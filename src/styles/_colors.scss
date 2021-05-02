@@ -1,0 +1,27 @@
+:root {
+	--unikit-color-white: #ffffff;
+	--unikit-color-white-rgb: 255, 255, 255;
+
+	--unikit-color-black: #000000;
+	--unikit-color-black-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--unikit-global-color-background: var(--unikit-color-black);
+		--unikit-global-color-background-rgb: var(--unikit-color-black-rgb);
+
+		--unikit-global-color-foreground: var(--unikit-color-white);
+		--unikit-global-color-foreground-rgb: var(--unikit-color-white-rgb);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--unikit-global-color-background: var(--unikit-color-white);
+		--unikit-global-color-background-rgb: var(--unikit-color-white-rgb);
+
+		--unikit-global-color-foreground: var(--unikit-color-black);
+		--unikit-global-color-foreground-rgb: var(--unikit-color-black-rgb);
+	}
+}
