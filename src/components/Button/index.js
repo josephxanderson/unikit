@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import './styles.scss';
 import ConfigurationContext from '../../configuration-context.js';
 
-const getElementProperties = (backgroundColor, color, type) => {
+const getElementProperties = (backgroundColor, color, style) => {
 	let className = "button";
 
 	if (backgroundColor) {
@@ -18,10 +18,10 @@ const getElementProperties = (backgroundColor, color, type) => {
 		className = className.concat(` color-${color}`);
 	}
 
-	if (type) {
-		type.forEach((type) => {
-			// Add the type classname.
-			className = className.concat(` type-${type}`);
+	if (style) {
+		style.forEach((style) => {
+			// Add the style classname.
+			className = className.concat(` style-${style}`);
 		})
 	}
 
@@ -36,9 +36,9 @@ const Button = ({
 	color,
 	image,
 	title,
-	type,
+	style,
 }) => {
-	const [className] = getElementProperties(backgroundColor, color, type);
+	const [className] = getElementProperties(backgroundColor, color, style);
 
 	const element = (
 		<button className={className} role="button" aria-label={accessibilityLabel}>

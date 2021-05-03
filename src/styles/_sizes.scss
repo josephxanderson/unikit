@@ -23,7 +23,11 @@ $sizeScreenMobileWidth: 320px;
 
 @media only screen and (max-width: $sizeScreenTabletWidth) {
 	:root {
-		// Example. it might actually be best to zoom in the font size in html.
-		// --size-separation-small: 1.2rem;
+		--size-separation-extra-small: 0.4rem;
+		--size-separation-small: 1.2rem;
+		--size-separation-regular: 2.0rem;
+		--size-separation-medium: 2.6rem;
+		--size-separation-large: 4.8rem;
+		--size-separation-extra-large: 9.2rem;
 	}
 }

@@ -16,25 +16,49 @@ button.button {
 	width: auto;
 	height: auto;
 
+	// Borders
+	border-radius: var(--size-border-radius);
+	border-width: var(--size-border-width);
+	border-style: solid;
+	border-color: transparent;
+
 	// Colors
 	background-color: transparent; // Default background color
 	color: rgba(var(--color-blue), 1.0); // Default color
-
-	// Typography
-	font-family: var(--font-family);
-	font-size: var(--font-size-body);
 
 	// Miscellaneous
 	cursor: pointer;
 	user-select: none;
 
-	// Background colors
-	&.backgroundColor {
+	// Transitions & Animations
+	will-change: opacity;
+	transition-property: opacity;
+	transition-duration: var(--animation-regular-duration);
+	transition-timing-function: var(--animation-regular-timing);
+	transition-delay: 0ms;
 
-		&-accent {
-			background-color: rgba(var(--color-accent), 1.0);
-		}
+	&:active {
+		opacity: var(--opacity-selected);
 
+		// Transitions & Animations
+		transition-duration: 0ms;
+	}
+
+	// Button Title
+	span.button-title {
+		// Display & Positioning
+		position: relative;
+		display: block;
+
+		// Sizes
+		width: auto;
+		height: auto;
+
+		// Typography
+		font-family: var(--font-family);
+		font-size: var(--font-size-button);
+		font-weight: var(--font-weight-button);
+		letter-spacing: var(--font-weight-button);
 	}
 
 	// Colors
@@ -43,10 +67,21 @@ button.button {
 		&-accent {
 			color: rgba(var(--color-accent), 1.0);
 
-			&.type {
+			&.style {
 
 				&-outline {
 					border-color: rgba(var(--color-accent), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-accent), 1.0);
+					border-color: rgba(var(--color-accent), 1.0);
+
+					span.button-title {
+						color: rgba(var(--color-accent), 1.0);
+						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
+					}
+
 				}
 
 			}
@@ -55,24 +90,41 @@ button.button {
 
 		&-white {
 			color: rgba(var(--color-white), 1.0);
+
+			&.style {
+
+				&-outline {
+					border-color: rgba(var(--color-white), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-white), 1.0);
+					border-color: rgba(var(--color-white), 1.0);
+
+					span.button-title {
+						color: rgba(var(--color-white), 1.0);
+						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
+					}
+
+				}
+
+			}
+
 		}
 
 	}
 
-	// Types
-	&.type {
+	// Styles
+	&.style {
 
-		&-outline {
+		&-outline,
+		&-filled {
+
 			// Margin & padding
 			padding-top: var(--size-separation-small);
 			padding-right: var(--size-separation-small);
 			padding-bottom: var(--size-separation-small);
 			padding-left: var(--size-separation-small);
-
-			// Borders
-			border-radius: var(--size-border-radius);
-			border-width: var(--size-border-width);
-			border-style: solid;
 		}
 
 		&-fullWidth {
