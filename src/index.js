@@ -8,6 +8,7 @@ import List from './components/List';
 import ListItem from './components/ListItem';
 import ListSection from './components/ListSection';
 import Text from './components/Text';
+import View from './components/View';
 
 // Create the default UIConfigurationContext object.
 const Configuration = ConfigurationContext.Provider;
@@ -24,4 +25,5 @@ export {
 	ListItem,
 	ListSection,
 	Text,
+	View,
 }

@@ -15,5 +15,5 @@ figure.icon {
 
 // SVG as icon
 svg.icon {
-
+	fill: rgba(var(--color-text), 1.0) // Default color.
 }
