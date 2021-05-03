@@ -8,16 +8,34 @@ const Text = ({
 	alignment,
 	children,
 	color,
-	font,
+	preset,
 	style,
 }) => {
-	return (
-		<ConfigurationContext.Consumer>
-			{value => (
-				<span>{children}</span>
-			)}
-		</ConfigurationContext.Consumer>
-	);
+	let role = null;
+	let Tag = "span";
+
+	const determinePreset = () => {
+		if (preset == "largeTitle") {
+			role = "heading";
+			Tag = "h1";
+		}
+
+		if (preset == "title1") {
+			role = "heading";
+			Tag = "h2";
+		}
+	}
+
+	determinePreset();
+
+	const element = (<Tag className={`
+		text
+		style--${preset}
+		${color ? 'color--${color}' : null}
+		${alignment ? 'align--${alignment}' : null}
+	`} role={role}>{children}</Tag>);
+
+	return element;
 }
 
 Text.propTypes = {
@@ -27,11 +45,19 @@ Text.propTypes = {
 		"trailing",
 	]),
 	color: PropTypes.string,
-	font: PropTypes.shape({
-		name: PropTypes.string,
-		size: PropTypes.number,
-		weight: PropTypes.string,
-	}),
+	preset: PropTypes.oneOf([
+		"largeTitle",
+		"title1",
+		"title2",
+		"title3",
+		"headline",
+		"body",
+		"callout",
+		"subhead",
+		"footnote",
+		"caption1",
+		"caption2",
+	]),
 	style: PropTypes.shape({
 		bold: PropTypes.bool,
 		italic: PropTypes.bool,

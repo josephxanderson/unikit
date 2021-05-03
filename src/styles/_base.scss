@@ -4,38 +4,7 @@
 } // *
 
 html {
-	--unikit-app-color-accent: var(--unikit-color-blue); // Default accent color
-
-	&[color-scheme="light"] {
-		// :root {
-			--unikit-color-background: var(--unikit-color-white);
-
-			--unikit-color-text: var(--unikit-color-black);
-			--unikit-color-text-secondary: var(--unikit-color-black);
-			--unikit-color-text-tertiary: var(--unikit-color-black);
-			--unikit-color-text-quaternary: var(--unikit-color-black);
-			--unikit-color-text-placeholder: var(--unikit-color-black);
-			--unikit-color-text-separator: var(--unikit-color-black);
-			--unikit-color-link: var(--unikit-color-black);
-		// } // :root
-
-	} // [color-scheme="light"]
-
-	&[color-scheme="dark"] {
-		// :root {
-			--unikit-color-background: var(--unikit-color-black);
-
-			--unikit-color-text: var(--unikit-color-white);
-			--unikit-color-text-secondary: var(--unikit-color-white);
-			--unikit-color-text-tertiary: var(--unikit-color-white);
-			--unikit-color-text-quaternary: var(--unikit-color-white);
-			--unikit-color-text-placeholder: var(--unikit-color-white);
-			--unikit-color-text-separator: var(--unikit-color-white);
-			--unikit-color-link: var(--unikit-color-white);
-		// } // :root
-
-	} // [color-scheme="dark"]
-
+	font-size: 10px; // 1.0rem === 10px
 } // html
 
 body {
@@ -51,10 +20,12 @@ body {
 	// Borders
 
 	// Background
-	background-color: rgba(var(--unikit-color-background), 1.0);
+	background-color: rgba(var(--color-background), 1.0);
 
 	// Typography
-	color: rgba(var(--unikit-color-text), 1.0);
+	font-family: var(--font-body-family);
+	font-size: var(--font-size-body);
+	color: rgba(var(--color-text), 1.0);
 	text-size-adjust: 100%; // Prevent font scaling in landscape.
 
 	div#UniKit-Root {

@@ -1,5 +1,5 @@
 // Framework imports
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ConfigurationContext from '../../configuration-context.js';
 
@@ -8,47 +8,31 @@ import '../../styles/index.scss';
 import Head from './Head';
 
 const Application = ({ children }) => {
+	const [fontsLoaded, setFontsLoaded] = useState(false);
 	const documentRoot = document.documentElement;
 
-	const setUserColorSchemePreference = () => {
-		// Test for Match Media API.
-		if (window.matchMedia) {
-			// Check for color scheme preference.
-			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				documentRoot.setAttribute('color-scheme', 'dark');
-			} else {
-				documentRoot.setAttribute('color-scheme', 'light');
-			}
-		}
-
-		// Set up color scheme event listener.
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-			if (event.matches) {
-				// Dark mode
-				documentRoot.setAttribute('color-scheme', 'dark');
-			} else {
-				// Light mode
-				documentRoot.setAttribute('color-scheme', 'light');
-			}
+	useEffect(() => {
+		document.fonts.ready.then(() => {
+			setFontsLoaded(true);
 		});
-	}
+	}, []);
 
 	const setDefaultColorScheme = (colorScheme) => {
 		documentRoot.setAttribute('color-scheme', colorScheme);
 	}
 
 	const setAccentColor = (color) => {
-		documentRoot.style.setProperty('--unikit-app-color-accent', color);
+		documentRoot.style.setProperty('--color-accent', color);
 	}
 
-	return (
+	const app = (
 		<ConfigurationContext.Consumer>
 			{configuration => (<>
 
 				{/* useUserColorSchemePreference */}
 				{
 					configuration.useUserColorSchemePreference
-					? setUserColorSchemePreference()
+					? null
 					: setDefaultColorScheme(configuration.defaultColorScheme)
 				}
 
@@ -128,6 +112,12 @@ const Application = ({ children }) => {
 			</>)}
 		</ConfigurationContext.Consumer>
 	);
+
+	if (!fontsLoaded) {
+		return <p>Loading...</p>;
+	} else {
+		return app;
+	}
 }
 
 export default Application;

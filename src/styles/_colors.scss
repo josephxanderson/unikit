@@ -1,35 +1,64 @@
 :root {
-	--unikit-color-white: 255, 255, 255;
+	// Default colors
+	--color-white: 255, 255, 255;
 
-	--unikit-color-black: 0, 0, 0;
+	--color-black: 0, 0, 0;
 
-	--unikit-color-blue: 0, 122, 255;
+	--color-blue: 0, 122, 255;
 
-	--unikit-color-green: 48, 209, 88;
+	--color-green: 48, 209, 88;
 
-	--unikit-color-indigo: 94, 92, 230;
+	--color-indigo: 94, 92, 230;
 
-	--unikit-color-orange: 255, 159, 10;
+	--color-orange: 255, 159, 10;
 
-	--unikit-color-pink: 255, 55, 95;
+	--color-pink: 255, 55, 95;
 
-	--unikit-color-purple: 191, 90, 242;
+	--color-purple: 191, 90, 242;
 
-	--unikit-color-red: 255, 69, 58;
+	--color-red: 255, 69, 58;
 
-	--unikit-color-teal: 100, 210, 255;
+	--color-teal: 100, 210, 255;
 
-	--unikit-color-yellow: 255, 214, 10;
+	--color-yellow: 255, 214, 10;
 
-	--unikit-color-gray-1: 242, 242, 247;
-	--unikit-color-gray-2: 229, 229, 234;
-	--unikit-color-gray-3: 209, 209, 214;
-	--unikit-color-gray-4: 199, 199, 204;
-	--unikit-color-gray-5: 174, 174, 178;
-	--unikit-color-gray-6: 142, 142, 147;
-	--unikit-color-gray-7: 99, 99, 102;
-	--unikit-color-gray-8: 72, 72, 74;
-	--unikit-color-gray-9: 58, 58, 60;
-	--unikit-color-gray-10: 44, 44, 46;
-	--unikit-color-gray-11: 28, 28, 30;
+	--color-gray-1: 242, 242, 247;
+	--color-gray-2: 229, 229, 234;
+	--color-gray-3: 209, 209, 214;
+	--color-gray-4: 199, 199, 204;
+	--color-gray-5: 174, 174, 178;
+	--color-gray-6: 142, 142, 147;
+	--color-gray-7: 99, 99, 102;
+	--color-gray-8: 72, 72, 74;
+	--color-gray-9: 58, 58, 60;
+	--color-gray-10: 44, 44, 46;
+	--color-gray-11: 28, 28, 30;
+
+	// UI Colors (default, light)
+	--color-background: var(--color-white);
+
+	--color-text: var(--color-black);
+	--color-text-secondary: var(--color-black);
+	--color-text-tertiary: var(--color-black);
+	--color-text-quaternary: var(--color-black);
+	--color-text-placeholder: var(--color-black);
+	--color-text-separator: var(--color-black);
+
+	--color-link: var(--color-black);
+
+	--color-accent: var(--color-blue); // Default accent color
+
+	// UI Colors (dark)
+	@media(prefers-color-scheme: dark) {
+		--color-background: var(--color-black);
+
+		--color-text: var(--color-white);
+		--color-text-secondary: var(--color-white);
+		--color-text-tertiary: var(--color-white);
+		--color-text-quaternary: var(--color-white);
+		--color-text-placeholder: var(--color-white);
+		--color-text-separator: var(--color-white);
+
+		--color-link: var(--color-white);
+	} // @media
 }

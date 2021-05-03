@@ -8,6 +8,13 @@ module.exports = function(_env, argv) {
 	return {
 		output: {
 			filename: 'UniKit.js',
+			libraryTarget: 'commonjs2',
+		},
+
+		externals: {
+			'react': 'commonjs react',
+			'react-dom': 'commonjs react-dom',
+			'react-router-dom': 'commonjs react-router-dom',
 		},
 
 		plugins: [
@@ -32,6 +39,15 @@ module.exports = function(_env, argv) {
 							}
 						}
 					]
+				},
+
+				{
+					test: /\.(ttf|woff|woff2|)$/,
+					use: [
+						{
+							loader: 'file-loader?name=[name].[ext]',
+						},
+					],
 				},
 
 				// CSS / SASS / SCSS files
