@@ -1,3 +1,91 @@
-.UniKit-Button {
-	background-color: orange;
+button.button {
+	// Override browser defaults
+    border: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+button.button {
+	// Display & Positioning
+	display: inline-block;
+	position: relative;
+
+	// Sizes
+	width: auto;
+	height: auto;
+
+	// Colors
+	background-color: transparent; // Default background color
+	color: rgba(var(--color-blue), 1.0); // Default color
+
+	// Typography
+	font-family: var(--font-family);
+	font-size: var(--font-size-body);
+
+	// Miscellaneous
+	cursor: pointer;
+	user-select: none;
+
+	// Background colors
+	&.backgroundColor {
+
+		&-accent {
+			background-color: rgba(var(--color-accent), 1.0);
+		}
+
+	}
+
+	// Colors
+	&.color {
+
+		&-accent {
+			color: rgba(var(--color-accent), 1.0);
+
+			&.type {
+
+				&-outline {
+					border-color: rgba(var(--color-accent), 1.0);
+				}
+
+			}
+
+		}
+
+		&-white {
+			color: rgba(var(--color-white), 1.0);
+		}
+
+	}
+
+	// Types
+	&.type {
+
+		&-outline {
+			// Margin & padding
+			padding-top: var(--size-separation-small);
+			padding-right: var(--size-separation-small);
+			padding-bottom: var(--size-separation-small);
+			padding-left: var(--size-separation-small);
+
+			// Borders
+			border-radius: var(--size-border-radius);
+			border-width: var(--size-border-width);
+			border-style: solid;
+		}
+
+		&-fullWidth {
+			// Display & positioning
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			justify-content: center;
+
+			// Sizes
+			width: 100%;
+		}
+
+	}
+
 }

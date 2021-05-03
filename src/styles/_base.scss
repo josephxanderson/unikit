@@ -23,14 +23,14 @@ body {
 	background-color: rgba(var(--color-background), 1.0);
 
 	// Typography
-	font-family: var(--font-body-family);
+	font-family: var(--font-family);
 	font-size: var(--font-size-body);
 	color: rgba(var(--color-text), 1.0);
 	text-size-adjust: 100%; // Prevent font scaling in landscape.
 
-	div#UniKit-Root {
+	div#__root {
 
-	} // div#UniKit-Root
+	} // div#__root
 
 } // body
 

@@ -12,7 +12,7 @@
 	--font-size-title-2: 2.2rem;
 	--font-size-title-3: 2.0rem;
 	--font-size-headline: 1.7rem;
-	--font-size-body: 1.7rem;
+	--font-size-body: 1.6rem;
 	--font-size-callout: 1.6rem;
 	--font-size-subhead: 1.5rem;
 	--font-size-footnote: 1.3rem;
@@ -31,6 +31,19 @@
 	--font-weight-footnote: 300;
 	--font-weight-caption-1: 300;
 	--font-weight-caption-2: 300;
+
+	// Font tracking
+	--font-tracking-large-title: 0.012rem;
+	--font-tracking-title-1: 0.014rem;
+	--font-tracking-title-2: -0.012rem;
+	--font-tracking-title-3: -0.023rem;
+	--font-tracking-headline: -0.026rem;
+	--font-tracking-body: -0.026rem;
+	--font-tracking-callout: -0.020rem;
+	--font-tracking-subhead: -0.016rem;
+	--font-tracking-footnote: -0.006rem;
+	--font-tracking-caption-1: 0.00rem;
+	--font-tracking-caption-2: 0.06rem;
 }
 
 // Import font
@@ -51,55 +64,75 @@ span {
 	&.text {
 		font-family: var(--font-family);
 		font-feature-settings: var(--font-features);
+
+		&.color-accent {
+			color: rgba(var(--color-accent), 1.0);
+		}
 	}
 }
 
-h1.style--largeTitle {
+h1.style-largeTitle {
 	font-size: var(--font-size-large-title);
 	font-weight: var(--font-weight-large-title);
+	letter-spacing: var(--font-tracking-large-title);
 }
 
-h2.Style--Title-1 {
+h2.style-title1 {
 	font-size: var(--font-size-title-1);
 	font-weight: var(--font-weight-title-1);
+	letter-spacing: var(--font-tracking-title-1);
 }
 
-h3.Style--Title-2 {
+h3.style-title2 {
 	font-size: var(--font-size-title-2);
 	font-weight: var(--font-weight-title-2);
+	letter-spacing: var(--font-tracking-title-2);
 }
 
-h4.Style--Title-3 {
+h4.style-title3 {
 	font-size: var(--font-size-title-3);
 	font-weight: var(--font-weight-title-3);
+	letter-spacing: var(--font-weight-title-3);
 }
 
-h5.Style--Caption-1 {
-	font-size: var(--font-size-caption-1);
-	font-weight: var(--font-weight-caption-1);
+p.style-headline {
+	font-size: var(--font-size-headline);
+	font-weight: var(--font-weight-headline);
+	letter-spacing: var(--font-weight-headline);
 }
 
-h6.Style--Caption-2 {
-	font-size: var(--font-size-caption-2);
-	font-weight: var(--font-weight-caption-2);
-}
-
-p.Style--Body {
+p.style-body {
 	font-size: var(--font-size-body);
 	font-weight: var(--font-weight-body);
+	letter-spacing: var(--font-weight-body);
 }
 
-p.Style--Callout {
+p.style-callout {
 	font-size: var(--font-size-callout);
 	font-weight: var(--font-weight-callout);
+	letter-spacing: var(--font-weight-callout);
 }
 
-p.Style--Subhead {
+p.style-subhead {
 	font-size: var(--font-size-subhead);
 	font-weight: var(--font-weight-subhead);
+	letter-spacing: var(--font-weight-subhead);
 }
 
-p.Style--Footnote {
+p.style-footnote {
 	font-size: var(--font-size-footnote);
 	font-weight: var(--font-weight-footnote);
+	letter-spacing: var(--font-weight-footnote);
+}
+
+h5.style-caption1 {
+	font-size: var(--font-size-caption-1);
+	font-weight: var(--font-weight-caption-1);
+	letter-spacing: var(--font-weight-caption-1);
+}
+
+h6.style-caption2 {
+	font-size: var(--font-size-caption-2);
+	font-weight: var(--font-weight-caption-2);
+	letter-spacing: var(--font-weight-caption-2);
 }

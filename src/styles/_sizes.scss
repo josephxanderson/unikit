@@ -1,0 +1,29 @@
+:root {
+
+	// Device screen sizes
+	--size-screen-desktop-width: 1366px;
+	--size-screen-tablet-width: 768px;
+	--size-screen-mobile-width: 320px;
+
+	--size-border-radius: 0.8rem;
+
+	--size-border-width: 0.175rem;
+
+	--size-separation-extra-small: 0.2rem;
+	--size-separation-small: 0.8rem;
+	--size-separation-regular: 1.6rem;
+	--size-separation-medium: 2.2rem;
+	--size-separation-large: 4.4rem;
+	--size-separation-extra-large: 8.8rem;
+}
+
+$sizeScreenDesktopWidth: 1366px;
+$sizeScreenTabletWidth: 768px;
+$sizeScreenMobileWidth: 320px;
+
+@media only screen and (max-width: $sizeScreenTabletWidth) {
+	:root {
+		// Example. it might actually be best to zoom in the font size in html.
+		// --size-separation-small: 1.2rem;
+	}
+}
