@@ -82,28 +82,17 @@ button.button {
 
 			&.style {
 
-				&-outline {
+				&-outlined {
 					border-color: rgba(var(--color-accent), 1.0);
 				}
 
 				&-filled {
 					background-color: rgba(var(--color-accent), 1.0);
 					border-color: rgba(var(--color-accent), 1.0);
-
-					span.button-title {
-						color: rgba(var(--color-accent), 1.0);
-						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
-					}
-
-					svg.icon {
-						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
-					}
-
 				}
 
 			}
-
-		}
+		} // &-accent
 
 		&-white {
 			color: rgba(var(--color-white), 1.0);
@@ -114,35 +103,465 @@ button.button {
 
 			&.style {
 
-				&-outline {
+				&-outlined {
 					border-color: rgba(var(--color-white), 1.0);
 				}
 
 				&-filled {
 					background-color: rgba(var(--color-white), 1.0);
 					border-color: rgba(var(--color-white), 1.0);
-
-					span.button-title {
-						color: rgba(var(--color-white), 1.0);
-						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
-					}
-
-					svg.icon {
-						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
-					}
-
 				}
 
 			}
+		} // &-white
 
-		}
+		&-black {
+			color: rgba(var(--color-black), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-black), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-black), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-black), 1.0);
+					border-color: rgba(var(--color-black), 1.0);
+				}
+
+			}
+		} // &-black
+
+		&-blue {
+			color: rgba(var(--color-blue), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-blue), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-blue), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-blue), 1.0);
+					border-color: rgba(var(--color-blue), 1.0);
+				}
+
+			}
+		} // &-blue
+
+		&-green {
+			color: rgba(var(--color-green), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-green), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-green), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-green), 1.0);
+					border-color: rgba(var(--color-green), 1.0);
+				}
+
+			}
+		} // &-green
+
+		&-indigo {
+			color: rgba(var(--color-indigo), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-indigo), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-indigo), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-indigo), 1.0);
+					border-color: rgba(var(--color-indigo), 1.0);
+				}
+
+			}
+		} // &-indigo
+
+		&-orange {
+			color: rgba(var(--color-orange), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-orange), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-orange), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-orange), 1.0);
+					border-color: rgba(var(--color-orange), 1.0);
+				}
+
+			}
+		} // &-orange
+
+		&-pink {
+			color: rgba(var(--color-pink), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-pink), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-pink), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-pink), 1.0);
+					border-color: rgba(var(--color-pink), 1.0);
+				}
+
+			}
+		} // &-pink
+
+		&-purple {
+			color: rgba(var(--color-purple), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-purple), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-purple), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-purple), 1.0);
+					border-color: rgba(var(--color-purple), 1.0);
+				}
+
+			}
+		} // &-purple
+
+		&-red {
+			color: rgba(var(--color-red), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-red), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-red), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-red), 1.0);
+					border-color: rgba(var(--color-red), 1.0);
+				}
+
+			}
+		} // &-red
+
+		&-teal {
+			color: rgba(var(--color-teal), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-teal), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-teal), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-teal), 1.0);
+					border-color: rgba(var(--color-teal), 1.0);
+				}
+
+			}
+		} // &-teal
+
+		&-yellow {
+			color: rgba(var(--color-yellow), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-yellow), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-yellow), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-yellow), 1.0);
+					border-color: rgba(var(--color-yellow), 1.0);
+				}
+
+			}
+		} // &-yellow
+
+		&-gray-1 {
+			color: rgba(var(--color-gray-1), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-1), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-1), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-1), 1.0);
+					border-color: rgba(var(--color-gray-1), 1.0);
+				}
+
+			}
+		} // &-gray-1
+
+		&-gray-2 {
+			color: rgba(var(--color-gray-2), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-2), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-2), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-2), 1.0);
+					border-color: rgba(var(--color-gray-2), 1.0);
+				}
+
+			}
+		} // &-gray-2
+
+		&-gray-3 {
+			color: rgba(var(--color-gray-3), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-3), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-3), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-3), 1.0);
+					border-color: rgba(var(--color-gray-3), 1.0);
+				}
+
+			}
+		} // &-gray-3
+
+		&-gray-4 {
+			color: rgba(var(--color-gray-4), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-4), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-4), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-4), 1.0);
+					border-color: rgba(var(--color-gray-4), 1.0);
+				}
+
+			}
+		} // &-gray-4
+
+		&-gray-5 {
+			color: rgba(var(--color-gray-5), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-5), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-5), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-5), 1.0);
+					border-color: rgba(var(--color-gray-5), 1.0);
+				}
+
+			}
+		} // &-gray-5
+
+		&-gray-6 {
+			color: rgba(var(--color-gray-6), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-6), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-6), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-6), 1.0);
+					border-color: rgba(var(--color-gray-6), 1.0);
+				}
+
+			}
+		} // &-gray-6
+
+		&-gray-7 {
+			color: rgba(var(--color-gray-7), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-7), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-7), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-7), 1.0);
+					border-color: rgba(var(--color-gray-7), 1.0);
+				}
+
+			}
+		} // &-gray-7
+
+		&-gray-8 {
+			color: rgba(var(--color-gray-8), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-8), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-8), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-8), 1.0);
+					border-color: rgba(var(--color-gray-8), 1.0);
+				}
+
+			}
+		} // &-gray-8
+
+		&-gray-9 {
+			color: rgba(var(--color-gray-9), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-9), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-9), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-9), 1.0);
+					border-color: rgba(var(--color-gray-9), 1.0);
+				}
+
+			}
+		} // &-gray-1
+
+		&-gray-10 {
+			color: rgba(var(--color-gray-10), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-10), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-10), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-10), 1.0);
+					border-color: rgba(var(--color-gray-10), 1.0);
+				}
+
+			}
+		} // &-gray-10
+
+		&-gray-11 {
+			color: rgba(var(--color-gray-11), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-gray-11), 1.0);
+			}
+
+			&.style {
+
+				&-outlined {
+					border-color: rgba(var(--color-gray-11), 1.0);
+				}
+
+				&-filled {
+					background-color: rgba(var(--color-gray-11), 1.0);
+					border-color: rgba(var(--color-gray-11), 1.0);
+				}
+
+			}
+		} // &-gray-11
 
 	}
 
 	// Styles
 	&.style {
 
-		&-outline,
+		&-outlined,
 		&-filled {
 
 			// Margin & padding
@@ -150,6 +569,15 @@ button.button {
 			padding-right: var(--size-separation-small);
 			padding-bottom: var(--size-separation-small);
 			padding-left: var(--size-separation-small);
+		}
+
+		&-filled {
+			background-color: rgba(var(--color-blue), 1.0); // Default background color.
+
+			span.button-title,
+			svg.icon {
+				filter: invert(1) grayscale(1) contrast(100); // Should produce a decently-contrasting label for most accent colors.
+			}
 		}
 
 		&-fullWidth {

@@ -65,6 +65,9 @@ h6,
 p,
 span {
 	&.text {
+		position: relative;
+    	display: block;
+
 		font-family: var(--font-family);
 		font-feature-settings: var(--font-features);
 
