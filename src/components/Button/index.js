@@ -1,17 +1,12 @@
 // Framework imports
-import React, { useContext } from 'react';
+import React from 'react';
 
 // Application imports
 import './styles.scss';
-import ConfigurationContext from '../../configuration-context.js';
+import Icon from '../Icon';
 
-const getElementProperties = (backgroundColor, color, style) => {
+const getElementProperties = (color, style) => {
 	let className = "button";
-
-	if (backgroundColor) {
-		// Add the background color classname.
-		className = className.concat(` backgroundColor-${backgroundColor}`);
-	}
 
 	if (color) {
 		// Add the color classname.
@@ -30,18 +25,39 @@ const getElementProperties = (backgroundColor, color, style) => {
 	];
 }
 
+const getIcon = (icon) => {
+	// Determine if the image is an application provided icon.
+	// To do so, we check if the icon name provided begins with a '/'.
+	// If so, that means it's not an application provided icon,
+	// and we should use the Icon imagePath property.
+	if (
+		icon.startsWith('../') ||
+		icon.startsWith('./') ||
+		icon.startsWith('/')
+	) {
+		return (<Icon imagePath={icon}/>);
+	} else {
+		return (<Icon name={icon}/>);
+	}
+}
+
 const Button = ({
 	accessibilityLabel,
-	backgroundColor,
 	color,
-	image,
+	icon,
 	title,
 	style,
 }) => {
-	const [className] = getElementProperties(backgroundColor, color, style);
+	const [className] = getElementProperties(color, style);
 
 	const element = (
 		<button className={className} role="button" aria-label={accessibilityLabel}>
+			{
+				icon
+				? getIcon(icon)
+				: null
+			}
+
 			<span className="button-title">{title}</span>
 		</button>
 	);

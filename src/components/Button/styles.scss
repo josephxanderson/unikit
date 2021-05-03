@@ -44,6 +44,15 @@ button.button {
 		transition-duration: 0ms;
 	}
 
+	svg.icon,
+	figure.icon {
+		// Margin & padding
+		margin-right: var(--size-separation-extra-small);
+
+		// Color
+		fill: rgba(var(--color-blue), 1.0); // Default color
+	}
+
 	// Button Title
 	span.button-title {
 		// Display & Positioning
@@ -67,6 +76,10 @@ button.button {
 		&-accent {
 			color: rgba(var(--color-accent), 1.0);
 
+			svg.icon {
+				fill: rgba(var(--color-accent), 1.0);
+			}
+
 			&.style {
 
 				&-outline {
@@ -82,6 +95,10 @@ button.button {
 						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
 					}
 
+					svg.icon {
+						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
+					}
+
 				}
 
 			}
@@ -90,6 +107,10 @@ button.button {
 
 		&-white {
 			color: rgba(var(--color-white), 1.0);
+
+			svg.icon {
+				fill: rgba(var(--color-white), 1.0);
+			}
 
 			&.style {
 
@@ -103,6 +124,10 @@ button.button {
 
 					span.button-title {
 						color: rgba(var(--color-white), 1.0);
+						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
+					}
+
+					svg.icon {
 						filter: invert(1) grayscale(1) brightness(100); // Should produce a decently-contrasting label for most accent colors.
 					}
 

@@ -9,7 +9,8 @@
 
 	--size-border-width: 0.175rem;
 
-	--size-separation-extra-small: 0.2rem;
+	--size-separation-tiny: 0.4rem;
+	--size-separation-extra-small: 0.6rem;
 	--size-separation-small: 0.8rem;
 	--size-separation-regular: 1.6rem;
 	--size-separation-medium: 2.2rem;
@@ -23,7 +24,8 @@ $sizeScreenMobileWidth: 320px;
 
 @media only screen and (max-width: $sizeScreenTabletWidth) {
 	:root {
-		--size-separation-extra-small: 0.4rem;
+		--size-separation-tiny: 0.4rem;
+		--size-separation-extra-small: 0.8rem;
 		--size-separation-small: 1.2rem;
 		--size-separation-regular: 2.0rem;
 		--size-separation-medium: 2.6rem;
