@@ -1,5 +1,5 @@
 // Framework imports
-import React from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 // Application imports
 import './styles.scss';
@@ -15,10 +15,19 @@ const getElementProperties = () => {
 const TabBar = ({
 	children,
 }) => {
+	const targetRef = useRef();
+	const documentRoot = document.documentElement;
+
 	const [className] = getElementProperties();
 
+	useLayoutEffect(() => {
+		if (targetRef.current) {
+			documentRoot.style.setProperty('--tabbar-height', `${targetRef.current.offsetHeight}px`);
+		}
+	}, []);
+
 	const element = (
-		<div className={className}>{children}</div>
+		<nav className={className} ref={targetRef}>{children}</nav>
 	);
 
 	return element;

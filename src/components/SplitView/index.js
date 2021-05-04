@@ -1,5 +1,5 @@
 // Framework imports
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from "prop-types";
 
 // Application imports
@@ -19,17 +19,38 @@ const SplitView = ({
 	secondaryColumn,
 	compact,
 }) => {
+	const [windowWidth, setWindowWidth] = useState(null);
 	const [className] = getElementProperties();
 
-	const element = (
-		<div className={className}>
-			<div className="column-secondary">{secondaryColumn}</div>
-			<div className="column-primary">{primaryColumn}</div>
-			<div className="column-compact">{compact}</div>
-		</div>
-	);
+	let screenSizeClassCompact = getComputedStyle(document.documentElement).getPropertyValue('--size-screen-class-compact');
 
-	return element;
+	useEffect(() => {
+		setWindowWidth(window.innerWidth);
+
+		const windowResizeEventListener = window.addEventListener('resize', () => {
+			setWindowWidth(window.innerWidth);
+		});
+
+		return(() => {
+			window.removeEventListener('resize', windowResizeEventListener);
+		})
+	}, [windowWidth]);
+
+	if (windowWidth >= parseInt(screenSizeClassCompact, 10)) {
+		return (
+			<div className={className}>
+				<div className="column-secondary">{secondaryColumn}</div>
+				<div className="column-primary">{primaryColumn}</div>
+			</div>
+		);
+	} else {
+		return (
+			<div className={className}>
+				<div className="column-compact">{compact}</div>
+			</div>
+		);
+	}
+
 }
 
 SplitView.propTypes = {

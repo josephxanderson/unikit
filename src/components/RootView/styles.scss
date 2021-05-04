@@ -1,0 +1,18 @@
+div.rootView {
+	// Display & Positioning
+	position: relative;
+	display: block;
+
+	// Sizes
+	width: 100%;
+	height: 100%;
+
+	&.style {
+
+		&-withTabBar {
+			padding-bottom: var(--tabbar-height);
+		}
+
+	}
+
+}

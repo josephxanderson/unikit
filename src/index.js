@@ -5,6 +5,7 @@ import Application from './components/Application';
 import Button from './components/Button';
 import Icon from './components/Icon';
 import Label from './components/Label';
+import RootView from './components/RootView';
 import SplitView from './components/SplitView';
 import StackView from './components/StackView';
 import TabBar from './components/TabBar';
@@ -22,6 +23,7 @@ export {
 	Button,
 	Icon,
 	Label,
+	RootView,
 	SplitView,
 	StackView,
 	TabBar,
