@@ -5,6 +5,9 @@
 	--size-screen-tablet-width: 768px;
 	--size-screen-mobile-width: 320px;
 
+	// NEW device screen class sizes
+	--size-screen-class-compact: 768px;
+
 	--size-border-radius: 0.8rem;
 
 	--size-border-width: 0.175rem;
@@ -21,6 +24,8 @@
 $sizeScreenDesktopWidth: 1366px;
 $sizeScreenTabletWidth: 768px;
 $sizeScreenMobileWidth: 320px;
+
+$sizeScreenClassCompact: 768px;
 
 @media only screen and (max-width: $sizeScreenTabletWidth) {
 	:root {

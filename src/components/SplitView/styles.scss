@@ -1,0 +1,58 @@
+@use '../../styles/sizes';
+
+div.splitView {
+	// Display & Positioning
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	// Sizes
+	width: 100%;
+	height: 100%;
+
+	div.column-primary {
+		// Display & Positioning
+		position: relative;
+		display: block;
+
+		// Sizes
+		width: 65%;
+		height: 100%;
+
+		@media only screen and (max-width: sizes.$sizeScreenClassCompact) {
+			display: none;
+		}
+	} // div.splitView div.column-primary
+
+	div.column-secondary {
+		// Display & Positioning
+		position: relative;
+		display: block;
+
+		// Sizes
+		width: 35%;
+		height: 100%;
+
+		@media only screen and (max-width: sizes.$sizeScreenClassCompact) {
+			display: none;
+		}
+	} // div.splitView div.column-secondary
+
+	div.column-compact {
+		// Display & Positioning
+		position: relative;
+		display: block;
+
+		// Sizes
+		display: none;
+
+		// Sizes
+		width: 100%;
+		height: 100%;
+
+		@media only screen and (max-width: sizes.$sizeScreenClassCompact) {
+			display: block;
+		}
+	}
+
+} // div.splitView

@@ -2,10 +2,11 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
-import ConfigurationContext from "../../configuration-context.js";
+// Application imports
+import "./styles.scss";
 
 const getElementProperties = (alignment, color, preset, style) => {
-	let className = "text";
+	let className = "label";
 	let role = null;
 	let Tag = null;
 
@@ -93,7 +94,7 @@ const getElementProperties = (alignment, color, preset, style) => {
 	];
 }
 
-const Text = ({
+const Label = ({
 	alignment,
 	children,
 	color,
@@ -107,7 +108,7 @@ const Text = ({
 	return element;
 }
 
-Text.propTypes = {
+Label.propTypes = {
 	alignment: PropTypes.oneOf([
 		"center",
 		"leading",
@@ -135,4 +136,4 @@ Text.propTypes = {
 	}),
 }
 
-export default Text;
+export default Label;

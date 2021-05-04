@@ -5,27 +5,23 @@ import React from 'react';
 import './styles.scss';
 
 const getElementProperties = () => {
-	let className = "list--list-item";
+	let className = "tabBar";
 
 	return [
 		className,
 	];
 }
 
-const ListItem = ({
-	accessory,
-	accessibilityLabel,
+const TabBar = ({
 	children,
 }) => {
 	const [className] = getElementProperties();
 
 	const element = (
-		<li className={className}>
-			{children}
-		</li>
+		<div className={className}>{children}</div>
 	);
 
 	return element;
 }
 
-export default ListItem;
+export default TabBar;

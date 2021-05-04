@@ -4,10 +4,10 @@ import ConfigurationContext from "./configuration-context";
 import Application from './components/Application';
 import Button from './components/Button';
 import Icon from './components/Icon';
-import List from './components/List';
-import ListItem from './components/ListItem';
-import ListSection from './components/ListSection';
-import Text from './components/Text';
+import Label from './components/Label';
+import SplitView from './components/SplitView';
+import StackView from './components/StackView';
+import TabBar from './components/TabBar';
 import View from './components/View';
 
 // Create the default UIConfigurationContext object.
@@ -21,9 +21,9 @@ export {
 	Application,
 	Button,
 	Icon,
-	List,
-	ListItem,
-	ListSection,
-	Text,
+	Label,
+	SplitView,
+	StackView,
+	TabBar,
 	View,
 }
