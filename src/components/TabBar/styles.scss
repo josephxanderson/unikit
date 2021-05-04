@@ -10,8 +10,8 @@ nav.tabBar {
 	width: 100%;
 
 	// Margins & Padding
-	padding-bottom: var(--testing-safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
+	padding-bottom: var(--testing-safe-area-inset-bottom);
 
 	// Colors
 	background-color: orange;
