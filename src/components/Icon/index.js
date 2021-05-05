@@ -32,11 +32,12 @@ const Icon = ({
 	if (imagePath) {
 		element = (
 			<figure
-			className={className}
-			role="icon"
-			{...(accessibilityLabel ? {"aria-label": accessibilityLabel} : {})} // If accessibilityLabel then use aria-label.
-			{...(accessibilityLabel ? {} : {"aria-hidden": true})} // If no accessibility label then set aria-hidden="true".
-			style={{backgroundImage: `url(${imagePath})`}} />
+				className={className}
+				role="icon"
+				{...(accessibilityLabel ? {"aria-label": accessibilityLabel} : {})} // If accessibilityLabel then use aria-label.
+				{...(accessibilityLabel ? {} : {"aria-hidden": true})} // If no accessibility label then set aria-hidden="true".
+				style={{backgroundImage: `url(${imagePath})`}}
+			/>
 		);
 	} else {
 		element = (
@@ -47,7 +48,8 @@ const Icon = ({
 				{...(accessibilityLabel ? {} : {"aria-hidden": true})} // If no accessibility label then set aria-hidden="true".
 				width="32"
 				height="32"
-				viewBox="0 0 32 32">
+				viewBox="0 0 32 32"
+			>
 				<path d={icons[name]}></path>
 			</svg>
 		);

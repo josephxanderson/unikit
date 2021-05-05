@@ -1,6 +1,6 @@
 nav.tabBar {
 	// Display & Position
-	position: fixed;
+	position: absolute;
 	display: block;
     right: 0;
     bottom: 0;
@@ -11,7 +11,7 @@ nav.tabBar {
 
 	// Margins & Padding
 	padding-bottom: env(safe-area-inset-bottom);
-	padding-bottom: var(--testing-safe-area-inset-bottom);
+	// padding-bottom: var(--testing-safe-area-inset-bottom);
 
 	// Colors
 	background-color: orange;

@@ -81,31 +81,31 @@ const Application = ({ children }) => {
 					{/* Web app launch screens */}
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
-						href={configuration.launchScreens.iphone_5.url} />
+						href={configuration.launchScreens["320x568"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
-						href={configuration.launchScreens.iphone_6_7_8.url} />
+						href={configuration.launchScreens["375x667"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
-						href={configuration.launchScreens.iphone_6Plus_7Plus_8Plus.url} />
+						href={configuration.launchScreens["414x736"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
-						href={configuration.launchScreens.iphone_X_XS_11Pro_12Mini.url} />
+						href={configuration.launchScreens["375x812"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
-						href={configuration.launchScreens.iphone_XR_11.url} />
+						href={configuration.launchScreens["414x896"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
-						href={configuration.launchScreens.iphone_12_12Pro.url} />
+						href={configuration.launchScreens["390x844"].url} />
 
 					<link rel="apple-touch-startup-image"
 						media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)"
-						href={configuration.launchScreens.iphone_12ProMax.url} />
+						href={configuration.launchScreens["428x926"].url} />
 				</Head>
 
 				{children}
