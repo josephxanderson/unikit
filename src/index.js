@@ -3,7 +3,7 @@ import ConfigurationContext from "./configuration-context";
 // Application imports
 import Application from './components/Application';
 import Button from './components/Button';
-import ContentView from './components/ContentView';
+import Header from './components/Header';
 import Icon from './components/Icon';
 import Label from './components/Label';
 import SplitView from './components/SplitView';
@@ -21,7 +21,7 @@ export {
 	// Components exports.
 	Application,
 	Button,
-	ContentView,
+	Header,
 	Icon,
 	Label,
 	SplitView,

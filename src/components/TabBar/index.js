@@ -13,21 +13,23 @@ const getElementProperties = () => {
 }
 
 const TabBar = ({
-	children,
+	children
 }) => {
-	const targetRef = useRef();
-	const documentRoot = document.documentElement;
+	const currentTabBar = useRef(null);
+	let parentView = null;
 
 	const [className] = getElementProperties();
 
 	useLayoutEffect(() => {
-		if (targetRef.current) {
-			documentRoot.style.setProperty('--tabbar-height', `${targetRef.current.offsetHeight}px`);
+
+		if (currentTabBar.current) {
+			parentView = currentTabBar.current.parentElement;
+			parentView.style.setProperty('--tabbar-height', `${currentTabBar.current.offsetHeight}px`);
 		}
 	}, []);
 
 	const element = (
-		<nav className={className} ref={targetRef}>{children}</nav>
+		<nav className={className} ref={currentTabBar}>{children}</nav>
 	);
 
 	return element;

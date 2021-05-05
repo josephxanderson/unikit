@@ -6,4 +6,11 @@ div.view {
 	// Sizes
 	width: auto;
 	height: auto;
+
+	padding-top: var(--header-height);
+
+	nav.tabBar + & {
+		padding-bottom: var(--tabbar-height);
+	}
+
 }
